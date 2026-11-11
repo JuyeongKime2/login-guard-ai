@@ -1,0 +1,7 @@
+{
+  "autoencoder_eer_mean": 0.1042843137254902,
+  "autoencoder_eer_std": 0.06332537050045273,
+  "manhattan_eer_mean": 0.09600000000000002,
+  "manhattan_eer_std": 0.06937535585494319,
+  "paper_best_eer_range": "0.096 ~ 0.102 (Killourhy & Maxion 2009)"
+}

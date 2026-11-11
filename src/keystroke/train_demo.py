@@ -32,6 +32,7 @@ def main():
     v.save(config.KS_DEMO_PATH)
     np.savez(config.KS_DEMO_SAMPLES, genuine=demo_genuine, impostor=imp_demo)
     print("saved:", config.KS_DEMO_PATH, config.KS_DEMO_SAMPLES)
+    return v, {"valid_eer": e, "threshold": thr, "demo_far": far, "demo_frr": frr}
 
 
 if __name__ == "__main__":

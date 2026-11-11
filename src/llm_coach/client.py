@@ -7,7 +7,7 @@ API 키는 환경변수로만 받는다. 코드나 GitHub에 키를 적지 말 �
 """
 import os
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 

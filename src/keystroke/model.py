@@ -41,12 +41,14 @@ class Verifier:
             noise = max(noise, 0.3)
         opt = torch.optim.Adam(self.model.parameters(), lr=lr, weight_decay=1e-4)
         self.model.train()
+        self.history = []                                   # epoch별 학습 손실 (노트북 시각화용)
         for _ in range(epochs):
             opt.zero_grad()
             noisy = Z + noise * torch.randn_like(Z)        # 디노이징 오토인코더
             loss = ((self.model(noisy) - Z) ** 2).mean()
             loss.backward()
             opt.step()
+            self.history.append(loss.item())
         self.model.eval()
         return self
 

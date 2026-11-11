@@ -22,6 +22,9 @@ LoginGuard AI는 이 문제를 3단계로 해결합니다.
 login-guard-ai/
 ├── README.md                ← 지금 이 파일 (전체 순서)
 ├── run_colab.ipynb          ← 코랩에서 위에서부터 차례대로 실행하면 끝
+├── notebooks/               ← 과제 제출용 분석 노트북 (실행 결과 포함, 코랩 실행 가능)
+│   ├── 01_password_risk_analysis.ipynb   ① 데이터 생성·EDA·학습·평가·오류 분석
+│   └── 02_keystroke_analysis.ipynb       ③ CMU 데이터 EDA·EER 평가·기준 모델 비교
 ├── requirements.txt
 ├── config.py                ← 경로, 상수 설정
 │

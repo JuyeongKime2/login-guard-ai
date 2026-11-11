@@ -35,7 +35,7 @@ def diagnose(pw: str) -> dict:
     flags = rule["flags"]
     prob = model_prob(pw)
     used_model = prob is not None
-    risk = prob if used_model else flags["rule_score"]
+    risk = 0.5 * prob + 0.5 * flags["rule_score"] if used_model else flags["rule_score"]
     if flags["is_common"]:
         risk = max(risk, 0.99)
     if flags["length"] < 8:
